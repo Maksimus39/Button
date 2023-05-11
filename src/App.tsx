@@ -15,7 +15,7 @@ function App() {
     }
   return (
     <div className="App">
-    {/* <button onClick={(event)=>{console.log('hello')}}>MyYouTubeChannel-1</button>*/}
+    {/*  <button onClick={(event)=>{console.log('hello')}}>MyYouTubeChannel-1</button>*/}
      <button onClick={(event:React.MouseEvent<HTMLButtonElement>)=>onClickHandler('VASYA')}>MyYouTubeChannel-1</button>
      <button onClick={(event:React.MouseEvent<HTMLButtonElement>)=>onClickHandler('ivan')}>MyYouTubeChannel-2</button>
     </div>
