@@ -1,25 +1,25 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {Button} from "./component/Button";
 
 
 function App() {
-   /* const myFirstSubscriber =(event:React.MouseEvent<HTMLButtonElement>)=>{
-        console.log('hello VASYA!')
+    const Button1Foo = (subscriber: string, age: number) => {
+        console.log(subscriber, age)
     }
-    const mySecondSubscriber=(event:React.MouseEvent<HTMLButtonElement>)=>{
-        console.log('hello ivan')
-    }*/
-    const  onClickHandler=(name: string)=>{
-        console.log(name)
+    const Button2Foo = (subscriber: string) => {
+        console.log(subscriber)
     }
-  return (
-    <div className="App">
-    {/*  <button onClick={(event)=>{console.log('hello')}}>MyYouTubeChannel-1</button>*/}
-     <button onClick={(event:React.MouseEvent<HTMLButtonElement>)=>onClickHandler('VASYA')}>MyYouTubeChannel-1</button>
-     <button onClick={(event:React.MouseEvent<HTMLButtonElement>)=>onClickHandler('ivan')}>MyYouTubeChannel-2</button>
-    </div>
-  );
+    const Button3Foo = () => {
+        console.log('Stupid Button')
+    }
+    return (
+        <div className={"App"}>
+            <Button name={'MyYouTubeChannel-1'} callBack={() => Button1Foo('Dima', 21)}/>
+            <Button name={'MyYouTubeChannel-2'} callBack={() => Button2Foo('Max')}/>
+            <Button name={'Stupid Button'} callBack={() => Button3Foo()}/>
+        </div>
+    );
 }
-
 export default App;
