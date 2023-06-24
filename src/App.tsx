@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import {Button} from "./component/Button";
+import React, {MouseEvent} from 'react';
+import {MyFamily} from './components/MyFamily/MyFamily';
 
 
 function App() {
-    const Button1Foo = (subscriber: string, age: number) => {
-        console.log(subscriber, age)
+    const Rabotaet = (rabota: string, age: number, rost: number) => {
+        console.log(rabota, age, rost)
     }
-    const Button2Foo = (subscriber: string) => {
-        console.log(subscriber)
+    const Domohozyjca = (dom: string, age: number) => {
+        console.log(dom, age)
     }
-    const Button3Foo = () => {
-        console.log('Stupid Button')
+    const Chcolnik = (chcola: string, age: number) => {
+        console.log(chcola, age)
+    }
+    const SiditDoma = (igraet: string, age: number) => {
+        console.log(igraet, age)
     }
     return (
-        <div className={"App"}>
-            <Button name={'MyYouTubeChannel-1'} callBack={() => Button1Foo('Dima', 21)}/>
-            <Button name={'MyYouTubeChannel-2'} callBack={() => Button2Foo('Max')}/>
-            <Button name={'Stupid Button'} callBack={() => Button3Foo()}/>
+
+        <div className={'App'}>
+            {/*<button>MyFamily-1</button>*/}
+            {/*<button>MyFamily-2</button>*/}
+
+            <MyFamily name={'Macsim'} callback={()=>Rabotaet('Papa', 39, 173)}/>
+            <MyFamily name={'Larisa'} callback={()=>Domohozyjca('Mama',37)}/>
+            <MyFamily name={'Andrej'} callback={()=>Chcolnik('Sinock', 10)}/>
+            <MyFamily name={'Bogdan'} callback={()=>SiditDoma('MlSinock', 7)}/>
         </div>
-    );
+    )
 }
+
 export default App;
